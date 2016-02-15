@@ -1,3 +1,5 @@
+var helpers = require('./helpers.js'); // our custom middleware
+
 module.exports = function (app, express) {
   // app.get('/:code', linksController.navToLink);
 
@@ -10,9 +12,9 @@ module.exports = function (app, express) {
   // app.get('/api/links/', linksController.allLinks);
   // app.post('/api/links/', linksController.newLink);
 
-  // // If a request is sent somewhere other than the routes above,
-  // // send it through our custom error handler
-  // app.use(helpers.errorLogger);
-  // app.use(helpers.errorHandler);
+  // If a request is sent somewhere other than the routes above,
+  // send it through our custom error handler
+  app.use(helpers.errorLogger);
+  app.use(helpers.errorHandler);
 };
 
