@@ -18,27 +18,43 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Announcing DayPlanner, a simple way to build your trip itinerary
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  DayPlanner makes it easy for anyone to explore things to do in a neighborhood and easily build an itinerary for your day trip.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  DayPlanner is a free web application that helps people get out and explore new places. Users can browse through the application to
+  explore different neighborhoods. When they find an interesting place to visit, they can save it to a personal DayPlanner list to 
+  helpl plan their day. 
 
 ## Problem ##
   > Describe the problem your product solves.
+  It is time-consuming task for people to build a trip itinerary, and curarated trip itineraries often do not match with a person's 
+  particular interests or needs.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  DayPlanner leverages Foursquare venue data to allow users to find the best places to eat, drink, shop, or visit in any city in the 
+  world.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "We're excited to share DayPlanner with the world. It's a simple, fun way for users to explore new places."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  DayPlanner is a free application for users around the world. In less than one minute, users can set up free account and start 
+  building their own custom DayPlanner lists.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I was planning a trip to San Francisco with a group of friends, and DayPlanner made it incredibly easy to find all the best places
+  to visit and store the list for easy access throughout our trip."
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  To try DayPlanner, visit www.dayplanner.com to set up an account and start exploring.
+
