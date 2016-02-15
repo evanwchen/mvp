@@ -1,0 +1,23 @@
+{
+  "name": "dayplanner",
+  "version": "1.0.0",
+  "description": "DayPlanner makes it easy for anyone to explore things to do in a neighborhood and easily build an itinerary for your day trip.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanwchen/2016-01-mvp.git"
+  },
+  "author": "Evan Chen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/evanwchen/2016-01-mvp/issues"
+  },
+  "homepage": "https://github.com/evanwchen/2016-01-mvp#readme",
+  "dependencies": {
+    "express": "^4.4.5",
+    "mongoose": "^4.1.0"
+  }
+}

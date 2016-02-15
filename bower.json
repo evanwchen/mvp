@@ -1,0 +1,24 @@
+{
+  "name": "dayplanner",
+  "homepage": "https://github.com/evanwchen/2016-01-mvp",
+  "authors": [
+    "Evan Chen"
+  ],
+  "description": "DayPlanner makes it easy for anyone to explore things to do in a neighborhood and easily build an itinerary for your day trip.",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.0"
+  }
+}
