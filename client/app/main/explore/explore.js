@@ -1,6 +1,6 @@
 angular.module('dayplanner.explore', [])
 
-.controller('ExploreController', function ($scope, $http) {
+.controller('ExploreController', function ($scope, $http, $location) {
   $scope.venues = [
     {  
       name: "Venue Name",
@@ -22,18 +22,16 @@ angular.module('dayplanner.explore', [])
 
   $scope.explore = function() {
     if ($scope.text) {
-      $http({
-        method: 'GET',
-        url: '/someUrl'
-      }).then(function successCallback(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-      }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-      });
-      $scope.text='';
+      $location.path('/api/explore')
+      // }).then(function successCallback(response) {
+      //   console.log('res: ',response);
+      // }, function errorCallback(response) {
+      //   // called asynchronously if an error occurs
+      //   // or server returns response with an error status.
+      //   console.log('res: ',response);
+      // });
     }
+    $scope.text='';
   }
 
 });

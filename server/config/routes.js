@@ -1,4 +1,5 @@
-var helpers = require('./helpers.js'); // our custom middleware
+var helpers = require('./helpers.js');
+var venueController = require('../venues/venueController');
 
 module.exports = function (app, express) {
   // app.get('/:code', linksController.navToLink);
@@ -14,6 +15,9 @@ module.exports = function (app, express) {
 
   // If a request is sent somewhere other than the routes above,
   // send it through our custom error handler
+
+  app.post('/api/explore', venueController);
+
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
 };
