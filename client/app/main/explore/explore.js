@@ -26,9 +26,13 @@ angular.module('dayplanner.explore', [])
         method: 'GET',
         url: '/api/explore'
       }).then(function successCallback(response) {
-        console.log('good', response)
+        $scope.venues = [];
+        console.log(response);
+        for (var i = 0; i < response.data.response.venues.length; i++) {
+          $scope.venues[i] = response.data.response.venues[i];
+        }
       }, function errorCallback(response) {
-        console.log('error', response);
+        console.log('error');
       })
     }
     $scope.text='';
