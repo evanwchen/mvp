@@ -17,9 +17,5 @@ angular.module('dayplanner.list', [])
       rating: "Venue Rating 2"
     }
   ];
-
-  $scope.count=0;
-  
-
 });
 

@@ -63,7 +63,6 @@ angular.module('dayplanner.explore', [])
   };
 
   $scope.addToList = function () {
-    console.log('hit addtolist');
     Count.addCount();
   };
 

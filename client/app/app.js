@@ -31,21 +31,22 @@ angular.module('dayplanner', [
 
 })
 .controller('MainController', function ($scope, Count) {
-  $scope.count = Count.getCount();
+  $scope.count = Count.getCount;
 
   setInterval(function(){$scope.count = Count.getCount()},100);
 })
 .factory('Count', function() {
-  var count = 0;
+  var list = [];
 
   return {
+    list: list,
     getCount: function(){
-      return count;
+      return list.length;
     },
     addCount: function(){
-      count++;
-      console.log('count: ', count);
-      return count;
+      // count++;
+      list.push('test');
+      return list.length;
     }
   }
 });
