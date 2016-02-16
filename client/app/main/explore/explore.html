@@ -1,1 +1,10 @@
-<div>Explore</div>
+<div id='container'>
+  <div class='search'>
+    <input class='text' type='text'>
+  </div>
+  <div class='venue'>
+    <ul>
+      <li ng-repeat='venue in venues'>{{venue.name}}</li>
+    </ul>
+  </div>
+</div>

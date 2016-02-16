@@ -1,5 +1,6 @@
 angular.module('dayplanner', [
   'dayplanner.home',
+  'dayplanner.explore',
   'dayplanner.list',
   'ui.router',
   'ngMaterial'
@@ -19,12 +20,12 @@ angular.module('dayplanner', [
     .state('main.explore', {
       url: '/explore',
       templateUrl: 'app/main/explore/explore.html',
-      controller: 'HomeController' // update
+      controller: 'ExploreController'
     })
     .state('main.list', {
       url: '/list',
       templateUrl: 'app/main/list/list.html',
-      controller: 'ListController' // update
+      controller: 'ListController'
     });
 
 })
