@@ -1,7 +1,9 @@
 <div id='container'>
-  <div class='search'>
-    <input class='text' type='text'>
-  </div>
+  <form ng-submit='explore()'>
+    <input type='text' placeholder="Where are you going?" ng-model='text' required>
+    <md-button class="md-raised" type="submit">Explore</md-button>
+  </form>
+
   <div class='venue'>
     <ul>
       <li ng-repeat='venue in venues'>{{venue.name}}</li>

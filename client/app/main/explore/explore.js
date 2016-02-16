@@ -1,7 +1,7 @@
 angular.module('dayplanner.explore', [])
 
-.controller('ExploreController', function ($scope) {
-    $scope.venues = [
+.controller('ExploreController', function ($scope, $http) {
+  $scope.venues = [
     {  
       name: "Venue Name",
       category: "Venue Category",
@@ -17,6 +17,24 @@ angular.module('dayplanner.explore', [])
       rating: "Venue Rating 2"
     }
   ];
+
+  $scope.text='';
+
+  $scope.explore = function() {
+    if ($scope.text) {
+      $http({
+        method: 'GET',
+        url: '/someUrl'
+      }).then(function successCallback(response) {
+        // this callback will be called asynchronously
+        // when the response is available
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+      $scope.text='';
+    }
+  }
 
 });
 
