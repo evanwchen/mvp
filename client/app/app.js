@@ -43,8 +43,8 @@ angular.module('dayplanner', [
     getCount: function(){
       return count;
     },
-    addList: function(){
-      list.push('test');
+    addList: function(venue){
+      list.push(venue);
       count++;
       $rootScope.$emit('addList');
     }, 

@@ -62,8 +62,8 @@ angular.module('dayplanner.explore', [])
     })
   };
 
-  $scope.addToList = function () {
-    Count.addCount();
+  $scope.addToList = function (venue) {
+    Count.addList(venue);
   };
 
   $scope.search({search: $scope.cat, near: $scope.location});
