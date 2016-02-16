@@ -30,11 +30,22 @@ angular.module('dayplanner', [
     });
 
 })
-.controller('MainController', function ($scope) {
-  // $scope.count = $scope.list.length;
-  $scope.count=0;
-  // $scope.list = [];
+.controller('MainController', function ($scope, Count) {
+  $scope.count = Count.getCount();
+
+  setInterval(function(){$scope.count = Count.getCount()},100);
 })
-.factory('List', function($scope) {
-  $scope.list.push('test');
-})
+.factory('Count', function() {
+  var count = 0;
+
+  return {
+    getCount: function(){
+      return count;
+    },
+    addCount: function(){
+      count++;
+      console.log('count: ', count);
+      return count;
+    }
+  }
+});

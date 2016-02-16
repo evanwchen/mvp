@@ -1,7 +1,7 @@
 angular.module('dayplanner.list', [])
 
 .controller('ListController', function ($scope) {
-    $scope.venues = [
+  $scope.venues = [
     {  
       name: "Venue Name",
       category: "Venue Category",
@@ -17,6 +17,9 @@ angular.module('dayplanner.list', [])
       rating: "Venue Rating 2"
     }
   ];
+
+  $scope.count=0;
+  
 
 });
 

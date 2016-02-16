@@ -1,6 +1,6 @@
 angular.module('dayplanner.explore', [])
 
-.controller('ExploreController', function ($scope, $http, $location) {
+.controller('ExploreController', function ($scope, $http, $location, Count) {
   $scope.venues;
 
   $scope.cat='All Venues';
@@ -63,7 +63,8 @@ angular.module('dayplanner.explore', [])
   };
 
   $scope.addToList = function () {
-    // complete.
+    console.log('hit addtolist');
+    Count.addCount();
   };
 
   $scope.search({search: $scope.cat, near: $scope.location});

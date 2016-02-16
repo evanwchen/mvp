@@ -11,11 +11,11 @@
 </div>
 
 <div>
-  <h3>Exploring {{cat}} in {{location}}</h3>
+  <h3>Exploring {{cat}} in {{location}}:</h3>
   <div ng-repeat='(id, venue) in venues'>
     <div class="row">
       <div class="col-md-1">
-        <button type="button" class="btn btn-primary" ngClick=addToList()>Add to List</button>
+        <button type="button" class="btn btn-primary" ng-click=addToList()>Add to List</button>
       </div>
       <div class="col-md-10"> 
         <ul class='venues'>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-4 .col-sm-4 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
+      <div class="col-xs-4 .col-sm-3 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
         <a href={{photo}} class="thumbnail">
           <img src={{photo}} alt="Venue Photo">
         </a>
