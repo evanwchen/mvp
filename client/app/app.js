@@ -30,23 +30,28 @@ angular.module('dayplanner', [
     });
 
 })
-.controller('MainController', function ($scope, Count) {
-  $scope.count = Count.getCount;
-
-  setInterval(function(){$scope.count = Count.getCount()},100);
+.controller('MainController', function ($scope, $rootScope, Count) {
+  $scope.count = Count.getCount();
+  $rootScope.$on('addList', function() {
+    $scope.count = Count.getCount();
+  });
 })
-.factory('Count', function() {
+.factory('Count', function($rootScope) {
   var list = [];
-
-  return {
-    list: list,
+  var count = 0;
+  var countObj = {
     getCount: function(){
-      return list.length;
+      return count;
     },
-    addCount: function(){
-      // count++;
+    addList: function(){
       list.push('test');
-      return list.length;
+      count++;
+      $rootScope.$emit('addList');
+    }, 
+    getList: function(){
+      return list;
     }
-  }
+  };
+
+  return countObj;
 });
