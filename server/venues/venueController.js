@@ -2,7 +2,7 @@ var request = require('request');
 var config = require('../../config');
 
 module.exports = {
-  exploreVenue: function (req, res, next) {
+  explore: function (req, res, next) {
     var uri = 'https://api.foursquare.com/v2/venues/search?client_id='+config.client_id+'\
 &client_secret='+config.client_secret+'\
 &v=20160215\
@@ -10,7 +10,8 @@ module.exports = {
 &query=sushi\
 &limit=10\
 &venuePhotos=1\
-&query='+req.query.search;
+&query='+req.query.search+'\
+&near='+req.query.near;
 
     request.get({url: uri}, function(err, httpResponse, body) { 
       if (err) { 
@@ -20,7 +21,7 @@ module.exports = {
       }
     });
   },
-  explorePhotos: function (req, res, next) {
+  photos: function (req, res, next) {
     var uri = 'https://api.foursquare.com/v2/venues/'+req.query.id+'/photos?client_id='+config.client_id+'\
 &client_secret='+config.client_secret+'&v=20160215&limit=5';
 

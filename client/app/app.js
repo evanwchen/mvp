@@ -31,5 +31,10 @@ angular.module('dayplanner', [
 
 })
 .controller('MainController', function ($scope) {
-  $scope.count = 0;
+  // $scope.count = $scope.list.length;
+  $scope.count=0;
+  // $scope.list = [];
+})
+.factory('List', function($scope) {
+  $scope.list.push('test');
 })
