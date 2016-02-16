@@ -1,5 +1,6 @@
 angular.module('dayplanner', [
   'dayplanner.home',
+  'dayplanner.list',
   'ui.router',
   'ngMaterial'
 ])
@@ -23,7 +24,7 @@ angular.module('dayplanner', [
     .state('main.list', {
       url: '/list',
       templateUrl: 'app/main/list/list.html',
-      controller: 'HomeController' // update
+      controller: 'ListController' // update
     });
 
 })
