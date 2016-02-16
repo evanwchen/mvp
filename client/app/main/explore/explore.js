@@ -22,14 +22,14 @@ angular.module('dayplanner.explore', [])
 
   $scope.explore = function() {
     if ($scope.text) {
-      $location.path('/api/explore')
-      // }).then(function successCallback(response) {
-      //   console.log('res: ',response);
-      // }, function errorCallback(response) {
-      //   // called asynchronously if an error occurs
-      //   // or server returns response with an error status.
-      //   console.log('res: ',response);
-      // });
+      $http({
+        method: 'GET',
+        url: '/api/explore'
+      }).then(function successCallback(response) {
+        console.log('good', response)
+      }, function errorCallback(response) {
+        console.log('error', response);
+      })
     }
     $scope.text='';
   }

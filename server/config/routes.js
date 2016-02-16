@@ -16,7 +16,9 @@ module.exports = function (app, express) {
   // If a request is sent somewhere other than the routes above,
   // send it through our custom error handler
 
-  app.post('/api/explore', venueController);
+  app.get('/api/explore', venueController.explore);
+  // app.post('/api/explore', venueController.explore);
+
 
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);

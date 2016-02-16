@@ -21,6 +21,7 @@
     "mongoose": "^4.1.0",
     "jwt-simple": "^0.2.0",
     "morgan": "^1.1.1",
-    "bcrypt-nodejs": "0.0.3"
+    "bcrypt-nodejs": "0.0.3",
+    "request": "^2.69.0"
   }
 }
