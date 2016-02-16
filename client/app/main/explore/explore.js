@@ -1,7 +1,7 @@
 angular.module('dayplanner.explore', [])
 
 .controller('ExploreController', function ($scope, $http, $location) {
-  $scope.venues = [];
+  $scope.venues = {};
 
   $scope.text='';
 
@@ -15,19 +15,29 @@ angular.module('dayplanner.explore', [])
           'Content-Type': 'application/json'
         }
       }).then(function successCallback(response) {
-        $scope.venues = [];
-        console.log(response.data.response.venues);
+        $scope.venues = {};
         for (var i = 0; i < response.data.response.venues.length; i++) {
-          $scope.venues[i] = response.data.response.venues[i];
+          var id = response.data.response.venues[i].id;
+          $scope.venues[id] = response.data.response.venues[i];
+
           $http({
             method: 'GET',
             url: '/api/explore/photos',
-            params: {id: $scope.venues[i].id},
+            params: {id: id},
             headers: {
               'Content-Type': 'application/json'
             }
           }).then(function successCallback(response) {
-
+            var venueID = response.config.params.id;
+            $scope.venues[venueID].photos = [];
+            for (var j = 0; j < response.data.response.photos.items.length; j++) {
+              var prefix = response.data.response.photos.items[j].prefix;
+              var suffix = response.data.response.photos.items[j].suffix;
+              var width = response.data.response.photos.items[j].width;
+              var height = response.data.response.photos.items[j].height;
+              var photoUrl = prefix+width+'x'+height+suffix;
+              $scope.venues[venueID].photos.push(photoUrl);
+            }
           }, function errorCallback(response) {
             console.log('error');
           });
@@ -38,6 +48,8 @@ angular.module('dayplanner.explore', [])
     }
     $scope.text='';
   }
+
+
 
 });
 

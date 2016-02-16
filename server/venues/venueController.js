@@ -16,21 +16,20 @@ module.exports = {
       if (err) { 
         res.status(500).send(err);
       } else {
-        console.log(body);
         res.status(200).send(body);
       }
     });
   },
   explorePhotos: function (req, res, next) {
-    var uri = 'https://api.foursquare.com/v2/venues/'+req.query.id+'/photos?client_id='+config.client_id+'&client_secret='+config.client_secret+'&v=20160215';
+    var uri = 'https://api.foursquare.com/v2/venues/'+req.query.id+'/photos?client_id='+config.client_id+'\
+&client_secret='+config.client_secret+'&v=20160215&limit=5';
 
     request.get({url: uri}, function(err, httpResponse, body) { 
       if (err) { 
         console.log(err);
         res.status(500).send(err);
       } else {
-        console.log(body);
-        res.status(200).send(body);
+        res.status(200).send(JSON.parse(body));
       }
     });
   },
