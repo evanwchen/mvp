@@ -1,22 +1,7 @@
 angular.module('dayplanner.explore', [])
 
 .controller('ExploreController', function ($scope, $http, $location) {
-  $scope.venues = [
-    {  
-      name: "Venue Name",
-      category: "Venue Category",
-      url: "www.example.com",
-      location: "Venue Location",
-      rating: "Venue Rating"
-    },
-    {
-      name: "Venue Name 2",
-      category: "Venue Category 2",
-      url: "www.example.com 2",
-      location: "Venue Location 2",
-      rating: "Venue Rating 2"
-    }
-  ];
+  $scope.venues = [];
 
   $scope.text='';
 
@@ -24,12 +9,28 @@ angular.module('dayplanner.explore', [])
     if ($scope.text) {
       $http({
         method: 'GET',
-        url: '/api/explore'
+        url: '/api/explore/venue',
+        params: {search: $scope.text},
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }).then(function successCallback(response) {
         $scope.venues = [];
-        console.log(response);
+        console.log(response.data.response.venues);
         for (var i = 0; i < response.data.response.venues.length; i++) {
           $scope.venues[i] = response.data.response.venues[i];
+          $http({
+            method: 'GET',
+            url: '/api/explore/photos',
+            params: {id: $scope.venues[i].id},
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).then(function successCallback(response) {
+
+          }, function errorCallback(response) {
+            console.log('error');
+          });
         }
       }, function errorCallback(response) {
         console.log('error');

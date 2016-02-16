@@ -4,9 +4,14 @@
     <md-button class="md-raised" type="submit">Explore</md-button>
   </form>
 
-  <div class='venue'>
-    <ul>
-      <li ng-repeat='venue in venues'>{{venue.name}}</li>
-    </ul>
+  <div>
+    <div ng-repeat='venue in venues'>
+      <ul class='venues'>
+        <li>{{venue.name}}</li>
+        <li>{{venue.categories[0].name}}</li>
+        <li>{{venue.location.address}}</li>
+        <li>{{venue.url}}</li>
+      </ul>
+    </div>
   </div>
 </div>
