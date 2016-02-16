@@ -1,7 +1,7 @@
 angular.module('dayplanner.explore', [])
 
 .controller('ExploreController', function ($scope, $http, $location) {
-  $scope.venues = {};
+  $scope.venues;
 
   $scope.text='';
 

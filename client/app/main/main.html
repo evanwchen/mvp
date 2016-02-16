@@ -1,4 +1,4 @@
-<div id='container'>
+<!-- <div class='container-fluid'>
   <div class='navigation'>
     <ul>
       <li><a ui-sref='.home'>DayPlanner</a></li>
@@ -12,34 +12,30 @@
   </div>
   <div ui-view></div>
 </div>
-<!-- 
+ -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref=".home">DayPlanner</a>
+    </div>
 
-<section layout="row" layout-sm="column" layout-align="center center" class="navigation">
-  <md-button class="groupX left"><a ui-sref='.home'>DayPlanner</a></md-button>
-  <md-button class="groupX middle"><a ui-sref='.explore'>Explore</a></md-button>
-  <md-button class="groupX middle"><a ui-sref='.list'>Your List</a></md-button>
-  <md-button class="groupX right"><a ui-sref='signup'>Sign Up</a></md-button>
-  <md-button class="groupX right"><a ui-sref='login'>Sign Up</a></md-button>
-</section>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref=".explore">Explore</a></li>
+        <li><a ui-sref=".list">Your List <span class="badge">{{count}}</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="signup">Sign up</a></li>
+        <li><a ui-sref="login">Log in</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-<div ng-cloak>
-  <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="one">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab One</h1>
-        </md-content>
-      </md-tab>
-      <md-tab label="two">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Two</h1>
-        </md-content>
-      </md-tab>
-      <md-tab label="three">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
-</div> -->
+<div ui-view></div>

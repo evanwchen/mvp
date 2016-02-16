@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/evanwchen/2016-01-mvp#readme",
   "dependencies": {
-    "express": "^4.4.5",
-    "mongoose": "^4.1.0",
-    "jwt-simple": "^0.2.0",
-    "morgan": "^1.1.1",
     "bcrypt-nodejs": "0.0.3",
+    "bootstrap": "^3.3.6",
+    "express": "^4.4.5",
+    "jwt-simple": "^0.2.0",
+    "mongoose": "^4.1.0",
+    "morgan": "^1.1.1",
     "request": "^2.69.0"
   }
 }

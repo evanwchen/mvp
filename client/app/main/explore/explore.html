@@ -1,4 +1,4 @@
-<div id='container'>
+<div>
   <form ng-submit='explore()'>
     <input type='text' placeholder="Where are you going?" ng-model='text' required>
     <md-button class="md-raised" type="submit">Explore</md-button>
@@ -11,7 +11,15 @@
         <li>{{venue.categories[0].name}}</li>
         <li>{{venue.location.address}}</li>
         <li>{{venue.url}}</li>
-        <div ng-repeat='photo in venue.photos'><img src={{photo}}></div>
+        <!-- <div class='imgContainer' ng-repeat='photo in venue.photos'><img src={{photo}}></div> -->
+
+        <div class="row">
+          <div class="col-xs-4 .col-sm-4 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
+            <a href="#" class="thumbnail">
+              <img src={{photo}} alt="Venue Photo">
+            </a>
+          </div>
+        </div>
       </ul>
     </div>
   </div>

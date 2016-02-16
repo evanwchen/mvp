@@ -10,7 +10,8 @@ angular.module('dayplanner', [
 
   $stateProvider
     .state('main', {
-      templateUrl: 'app/main/main.html'
+      templateUrl: 'app/main/main.html',
+      controller: 'MainController'
     })
     .state('main.home', {
       url: '/home',
@@ -28,4 +29,7 @@ angular.module('dayplanner', [
       controller: 'ListController'
     });
 
+})
+.controller('MainController', function ($scope) {
+  $scope.count = 0;
 })
