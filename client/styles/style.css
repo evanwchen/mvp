@@ -19,7 +19,6 @@ input[type=url]:focus {
   outline: none;
 }
 
-
 .error {
   border: red solid 4px;
   padding: 10px;
@@ -36,6 +35,20 @@ input[type=url]:focus {
   display: block;
   margin: 10px;
 }
+/*
+.homepage {
+  background-image: url('../assets/sanfran.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  filter: alpha(opacity = 40);
+  z-index:0;
+}*/
 
 .linkContainer > img {
   display: inline-block;
@@ -65,16 +78,14 @@ input[type=url]:focus {
   float: left;
 }
 
-.homepage {
-  background-image: url('../assets/sanfran.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  opacity: 0.3;
-  filter: alpha(opacity = 30);
+#map {
+  height:420px;
+  width:600px;
+}
+.infoWindowContent {
+  font-size:  14px !important;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
 }
 
 .md-button {

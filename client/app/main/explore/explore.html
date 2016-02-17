@@ -1,37 +1,39 @@
-<div class='row'>
-  <form class='col-md-4' ng-submit='exploreLoc()'>
-    <input type='text' placeholder="Where are you going?" ng-model='location' required>
-    <md-button class="md-raised" type="submit">Search Neighborhood</md-button>
-  </form>
+<div class='container-fluid'>
+  <div class='row'>
+    <form class='col-md-4' ng-submit='exploreLoc()'>
+      <input type='text' placeholder="Where are you going?" ng-model='location' required>
+      <md-button class="md-raised" type="submit">Search Neighborhood</md-button>
+    </form>
 
-  <form class='col-md-4' ng-submit='exploreCat()'>
-    <input type='text' placeholder="What do you want to do?" ng-model='cat' required>
-    <md-button class="md-raised" type="submit">Search Category</md-button>
-  </form>
-</div>
+    <form class='col-md-4' ng-submit='exploreCat()'>
+      <input type='text' placeholder="What do you want to do?" ng-model='cat' required>
+      <md-button class="md-raised" type="submit">Search Category</md-button>
+    </form>
+  </div>
 
-<div>
-  <h3>Exploring {{cat}} in {{location}}:</h3>
-  <div ng-repeat='(id, venue) in venues'>
-    <div class="row">
-      <div class="col-md-1">
-        <button type="button" class="btn btn-primary" ng-click=addToList(venue)>Add to List</button>
+  <div>
+    <h3>Exploring {{cat}} in {{location}}:</h3>
+    <div ng-repeat='(id, venue) in venues'>
+      <div class="row">
+        <div class="col-md-1">
+          <button type="button" class="btn btn-primary" ng-click=addToList(venue)>Add to List</button>
+        </div>
+        <div class="col-md-10"> 
+          <ul class='venues'>
+            <li>{{venue.name}}</li>
+            <li>{{venue.categories[0].name}}</li>
+            <li>{{venue.location.address}}</li>
+            <li>{{venue.url}}</li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-10"> 
-        <ul class='venues'>
-          <li>{{venue.name}}</li>
-          <li>{{venue.categories[0].name}}</li>
-          <li>{{venue.location.address}}</li>
-          <li>{{venue.url}}</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-xs-4 .col-sm-3 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
-        <a href={{photo}} class="thumbnail">
-          <img src={{photo}} alt="Venue Photo">
-        </a>
+      <div class="row">
+        <div class="col-xs-4 .col-sm-3 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
+          <a href={{photo}} class="thumbnail">
+            <img src={{photo}} alt="Venue Photo">
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,26 +1,29 @@
-<h3>Your DayPlanner List:</h3>
-<div ng-repeat='venue in venues track by $index'>
-  <div class="row">
-    <div class="col-md-2">
-      <button type="button" class="btn btn-primary" ng-click=removeFromList($index)>Remove from List</button>
+<div class='container-fluid'>
+  <h3>Your DayPlanner List:</h3>
+
+  <div id="map"></div>
+
+  <div ng-repeat='venue in venues track by $index'>
+    <div class="row">
+      <div class="col-md-2">
+        <button type="button" class="btn btn-primary" ng-click=removeFromList($index)>Remove from List</button>
+      </div>
+      <div class="col-md-10"> 
+        <ul class='venues'>
+          <li>{{venue.name}}</li>
+          <li>{{venue.categories[0].name}}</li>
+          <li>{{venue.location.address}}</li>
+          <li>{{venue.url}}</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-10"> 
-      <ul class='venues'>
-        <li>{{venue.name}}</li>
-        <li>{{venue.categories[0].name}}</li>
-        <li>{{venue.location.address}}</li>
-        <li>{{venue.url}}</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
+    <div class="row">
       <div class="col-xs-4 .col-sm-3 col-md-2 .col-lg-2" ng-repeat='photo in venue.photos'>
-        <a href={{photo}} class="thumbnail">
-          <img src={{photo}} alt="Venue Photo">
+        <a href='{{photo}}' class="thumbnail">
+          <img src='{{photo}}' alt="Venue Photo">
         </a>
       </div>
     </div>
+  </div>
+
 </div>
-
-
-

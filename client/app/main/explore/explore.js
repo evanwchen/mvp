@@ -5,18 +5,31 @@ angular.module('dayplanner.explore', [])
 
   $scope.cat='All Venues';
 
-  $scope.location='San Francisco, CA'
+  $scope.location='San Francisco, CA';
+
+  $scope.section='';
 
   $scope.exploreLoc = function() {
     if ($scope.location !== 'San Francisco, CA') {
-      var params = {search: $scope.cat, near: $scope.location};
+      var params;
+      if ($scope.section) {
+        params = {section: $scope.section, near: $scope.location};
+      } else {
+        params = {search: $scope.cat, near: $scope.location};
+      }
       $scope.search(params);
     }
   };
 
   $scope.exploreCat = function() {
     if ($scope.cat !== 'All Venues') {
-      var params = {search: $scope.cat, near: $scope.location};
+      var params;
+      if ($scope.section) {
+        params = {section: $scope.section, near: $scope.location};
+      } else {
+        params = {search: $scope.cat, near: $scope.location};
+      }
+
       $scope.search(params);
     }
   };
@@ -66,6 +79,6 @@ angular.module('dayplanner.explore', [])
     Count.addList(venue);
   };
 
-  $scope.search({search: $scope.cat, near: $scope.location});
+  $scope.search({section: 'trending', near: $scope.location});
 });
 
