@@ -4,7 +4,8 @@
   "description": "DayPlanner makes it easy for anyone to explore things to do in a neighborhood and easily build an itinerary for your day trip.",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
