@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/evanwchen/2016-01-mvp/issues"
   },
-   "keywords": [
+  "keywords": [
     "node",
     "heroku",
     "express"
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/evanwchen/2016-01-mvp#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
     "express": "^4.4.5",
     "jwt-simple": "^0.2.0",
