@@ -35,9 +35,12 @@ input[type=url]:focus {
   display: block;
   margin: 10px;
 }
-/*
+
 .homepage {
-  background-image: url('../assets/sanfran.jpg');
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url('../assets/sanfran.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   top: 50px;
@@ -45,10 +48,10 @@ input[type=url]:focus {
   height: 100%;
   width: 100%;
   position: absolute;
-  opacity: 0.4;
-  filter: alpha(opacity = 40);
-  z-index:0;
-}*/
+  color: white;
+/*  opacity: 0.4;
+  filter: alpha(opacity = 40);*/
+}
 
 .linkContainer > img {
   display: inline-block;
@@ -80,7 +83,8 @@ input[type=url]:focus {
 
 #map {
   height:420px;
-  width:600px;
+  width:100%;
+  margin-bottom: 15px;
 }
 .infoWindowContent {
   font-size:  14px !important;

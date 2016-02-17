@@ -2,7 +2,7 @@
   "name": "dayplanner",
   "version": "1.0.0",
   "description": "DayPlanner makes it easy for anyone to explore things to do in a neighborhood and easily build an itinerary for your day trip.",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,11 @@
   "bugs": {
     "url": "https://github.com/evanwchen/2016-01-mvp/issues"
   },
+   "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "homepage": "https://github.com/evanwchen/2016-01-mvp#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
